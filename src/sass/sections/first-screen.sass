@@ -8,7 +8,7 @@
     z-index: -1
     width: 100%
     height: 100%
-  &_container
+  &__container
     display: flex
     flex-direction: column
     justify-content: center
@@ -21,7 +21,7 @@
       background-color: #000000
       letter-spacing: 4.8px
       color: #ffffff
-      padding: 0 40px
+      padding: 10px 40px
       margin-bottom: 40px
     p
       font-size: 18px
@@ -29,37 +29,36 @@
       letter-spacing: 7.2px
       line-height: 1.33
       color: #000000
-.slick-prev
-  position: absolute
-  top: 50%
-  left: 5%
-  z-index: 99
-.slick-next
-  position: absolute
-  top: 50%
-  right: 5%
-  z-index: 99
 @media (max-width: 1120px)
   .first-s
-    &_container
+    &__container
       h1
         font-size: 40px
 @media (max-width: 800px)
   .first-s
-    &_container
+    &__container
+      align-items: center
       h1
         font-size: 34px
-@media (max-width: 520px)
+        margin-bottom: 30px
+@media (max-width: 535px)
   .first-s
-    &_container
+    &__container
       h1
         font-size: 25px
+        margin-bottom: 20px
       p
         font-size: 16px
-@media (max-width: 520px)
+@media (max-width: 445px)
   .first-s
-    &_container
+    &__container
       h1
         font-size: 18px
       p
         font-size: 12px
+@media (max-width: 370px)
+  .first-s
+    &__container
+      h1
+        font-size: 15px
+        line-height: 1.3

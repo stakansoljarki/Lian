@@ -1,0 +1,67 @@
+.team
+  background-color: #fafafa
+  padding-top: 50px
+  padding-bottom: 75px
+  &_margin
+    text-align: center
+    margin: 0 auto 65px
+    max-width: 600px
+  &__text
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__title
+    font-size: 30px
+    font-weight: 300
+    letter-spacing: 12px
+    line-height: 1.3
+    color: #000000
+    text-transform: uppercase
+    margin-bottom: 30px
+  &__description
+    font-size: 14px
+    line-height: 2.14
+    letter-spacing: 0.35px
+    text-align: center
+    color: #777777
+  &__container
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &-card
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__img
+      img
+        width: 100%
+        height: auto
+    &__text
+      background-color: #fff
+      max-width: 360px
+      padding: 30px 15px
+    &__title
+      font-size: 24px
+      font-weight: 300
+      letter-spacing: 0.96px
+      color: #041608
+      text-transform: uppercase
+      margin-bottom: 15px
+    &__position
+      display: block
+      font-size: 16px
+      font-weight: bold
+      letter-spacing: 0.4px
+      color: #777777
+      margin-bottom: 20px
+    &__description
+      font-size: 14px
+      line-height: 1.71
+      color: #9c9c9c
+
+@media (max-width: 1170px)
+  .team
+    &__container
+      flex-direction: column
+    &-card
+      margin-bottom: 35px

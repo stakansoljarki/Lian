@@ -11,7 +11,6 @@ const util = require('gulp-util');
 gulp.task('js', function() {
   return gulp
     .src(config.src.js + '/*.js')
-    //.pipe(plumber())
     .pipe(plumber(function (error) {
       util.log(error.message);
       this.emit('end');

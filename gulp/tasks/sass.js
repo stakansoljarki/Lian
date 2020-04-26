@@ -11,9 +11,7 @@ const plumber = require('gulp-plumber');
 const util = require('gulp-util');
 
 let plugins = [
-  //fonts(),
   autoprefixer({
-    //browsers: ['last 4 versions'],
     add: true,
     grid: true
   }),
@@ -29,7 +27,6 @@ let plugins = [
 gulp.task('sass', function() {
   return gulp
     .src(config.src.sass + '/*.{sass,scss}')
-    //.pipe(plumber())
     .pipe(plumber(function (error) {
       util.log(error.message);
       this.emit('end');
@@ -40,8 +37,6 @@ gulp.task('sass', function() {
     }))
     .pipe(postcss(plugins))
     .pipe(gulpif(config.isDevelopment, sourcemaps.write()))
-    //.pipe(gulpif(config.isDevelopment, postcss([fonts()])))
-    //.pipe(gulpif(!config.isDevelopment, postcss(plugins)))
     .pipe(gulp.dest(config.dest.css));
 });
 

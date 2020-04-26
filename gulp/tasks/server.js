@@ -3,9 +3,6 @@ const server = require('browser-sync').create();
 const util = require('gulp-util');
 const config = require('../config');
 
-// in CL 'gulp server --open' to open current project in browser
-// in CL 'gulp server --tunnel siteName' to make project available over http://siteName.localtunnel.me
-
 gulp.task('server', function(done) {
   server.init({
     server: {
@@ -16,10 +13,8 @@ gulp.task('server', function(done) {
       }
     },
     files: [
-      //config.src.root + '/**/*.*',
       config.dest.html + '/*.html',
       config.dest.css + '/*.css',
-      //config.src.sass + '/**/*.{sass,scss}',
       config.dest.js + '/*.js',
       config.dest.img + '/**/*'
     ],
@@ -30,7 +25,6 @@ gulp.task('server', function(done) {
     open: Boolean(util.env.open),
     notify: false,
     ghostMode: false,
-    //online: Boolean(util.env.tunnel),
     tunnel: util.env.tunnel || null
   });
   done();

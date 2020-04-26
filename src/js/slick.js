@@ -33,7 +33,6 @@ function slick() {
     asNavFor: '.portfolio-image__for',
     dots: false,
     arrows: false,
-    // centerMode: true,
     centerPadding: '30px',
     focusOnSelect: true
   });

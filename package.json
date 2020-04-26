@@ -1,11 +1,11 @@
 {
-  "name": "nardep.life",
+  "name": "lian",
   "version": "1.0.0",
   "scripts": {
     "build": "gulp build --production",
     "start": "gulp"
   },
-  "authors": "parovozik",
+  "authors": "stakansoljarki",
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",

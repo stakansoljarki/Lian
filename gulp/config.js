@@ -13,9 +13,6 @@ let config = {
 
   src: {
     root: 'src',
-    // pug: ['./src/pug/*.pug', './src/pug/**/*.pug'],
-    // sass: ['./src/sass/*.{scss,sass}', './src/sass/**/*.{scss,sass}'],
-    // js: ['./src/js/*.js', './src/js/**/*.js'],
     pug: 'src/pug',
     sass: 'src/sass',
     js: 'src/js',

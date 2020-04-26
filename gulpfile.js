@@ -1,6 +1,3 @@
-// Require all tasks in gulp/tasks, including subfolders
-// require('require-dir')('./gulp/tasks', {recurse: true});
-
 var gulp = require('gulp');
 var config = require('./gulp/config');
 
@@ -44,5 +41,3 @@ gulp.task('build:dev', gulp.series(setmodeDev, 'clean', 'pug', 'sass', 'js', 'co
 gulp.task('watch', gulp.parallel('copy:watch', 'pug:watch', 'sass:watch', 'js:watch'));
 
 gulp.task('default', gulp.series(['build:dev', 'server', 'watch']));
-
-// NODE_ENV=production gulp build

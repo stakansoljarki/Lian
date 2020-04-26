@@ -1,5 +1,5 @@
 .footer
-  &-container
+  &__container
     width: 100%
     padding: 50px 0
     display: flex
@@ -7,38 +7,38 @@
     justify-content: space-between
     align-items: center
     color: #000
-    &__img
-      margin-bottom: 45px
-      img
-        width: 100%
-    &__socials
+  &__img
+    margin-bottom: 45px
+    img
       width: 100%
-      display: flex
-      justify-content: center
-      align-items: center
-      padding: 25px 0
-      border-top: 1px solid #e1e1e1
-      border-bottom: 1px solid #e1e1e1
-      margin-bottom: 40px
-    &__link
+  &__socials
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 25px 0
+    border-top: 1px solid #e1e1e1
+    border-bottom: 1px solid #e1e1e1
+    margin-bottom: 40px
+  &__link
+    text-align: center
+    margin: 0 10px
+    line-height: 40px
+    width: 40px
+    height: 40px
+    transition: all 1s ease
+    border-radius: 5px
+    &:hover
+      border-radius: 50%
+      background-color: #959595
+      transform: rotate(360deg)
+    &:not(:last-child)
+      margin-right: 40px
+  &__description
+    p
+      font-size: 13px
+      line-height: 2
+      letter-spacing: 0.33px
       text-align: center
-      margin: 0 10px
-      line-height: 40px
-      width: 40px
-      height: 40px
-      transition: all 1s ease
-      border-radius: 5px
-      &:hover
-        border-radius: 50%
-        background-color: #959595
-        transform: rotate(360deg)
-      &:not(:last-child)
-        margin-right: 40px
-    &__description
-      p
-        font-size: 13px
-        line-height: 2
-        letter-spacing: 0.33px
-        text-align: center
-        text-transform: uppercase
-        color: #9c9c9c
+      text-transform: uppercase
+      color: #9c9c9c

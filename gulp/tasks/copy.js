@@ -11,10 +11,6 @@ const newer = require('gulp-newer');
 
 gulp.task('copy:img', function () {
   return gulp
-    // .src([
-    //     config.src.img + '/**/*.{jpg,png,jpeg,svg,gif}',
-    //     '!' + config.src.img + '/svgo/**/*.*'
-    // ])
     .src(config.src.img + '/**/*.{jpg,png,jpeg,svg,gif}')
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
@@ -32,24 +28,12 @@ gulp.task('copy:img', function () {
     .pipe(gulp.dest(config.dest.img));
 });
 
-// gulp.task('copy:fonts', function () {
-//   return gulp
-//     .src(config.src.fonts + '/*.{ttf,eot,woff,woff2}')
-//     .pipe(gulp.dest(config.dest.fonts));
-// });
-
 gulp.task('copy:libs', function () {
   return gulp
     .src(config.src.libs + '/**/*.*')
     .pipe(newer(config.dest.libs))
     .pipe(gulp.dest(config.dest.libs));
 });
-
-// gulp.task('copy:rootfiles', function () {
-//   return gulp
-//     .src(config.src.root + '/*.*')
-//     .pipe(gulp.dest(config.dest.root));
-// });
 
 let build =  function(gulp) {
   return gulp.series('copy:img', 'copy:libs');

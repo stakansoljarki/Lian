@@ -61,45 +61,45 @@ section.project
         .project__slider
             .project__slider-for
                 -
-                    let sliderFor = [
+                    let sliderForList = [
                         {
-                            src: './img/portfolio-det/bench.jpg',
+                            src: './img/portfolio/bench.jpg',
                             alt: 'minimalistic black bench'
                         },
                         {
-                            src: './img/portfolio-det/chair.jpg',
+                            src: './img/portfolio/chair.jpg',
                             alt: 'minimalistic white chair'
                         },
                         {
-                            src: './img/portfolio-det/table.jpg',
+                            src: './img/portfolio/table.jpg',
                             alt: 'table'
                         },
                         {
-                            src: './img/portfolio-det/table-mini.jpg',
+                            src: './img/portfolio/table-mini.jpg',
                             alt: 'high tech coffee table'
                         }
                     ]
-                each imageFor in sliderFor
-                    img(src=imageFor.src alt=imageFor.alt)
+                each sliderForItem in sliderForList
+                    img(src=sliderForItem.src alt=sliderForItem.alt)
             .project__slider-nav
                 -
-                    let sliderNav = [
+                    let sliderNavList = [
                         {
-                            src: './img/portfolio-det/bench.jpg',
+                            src: './img/portfolio/bench.jpg',
                             alt: 'minimalistic black bench'
                         },
                         {
-                            src: './img/portfolio-det/chair.jpg',
+                            src: './img/portfolio/chair.jpg',
                             alt: 'minimalistic white chair'
                         },
                         {
-                            src: './img/portfolio-det/table.jpg',
+                            src: './img/portfolio/table.jpg',
                             alt: 'table'
                         },
                         {
-                            src: './img/portfolio-det/table-mini.jpg',
+                            src: './img/portfolio/table-mini.jpg',
                             alt: 'high tech coffee table'
                         }
                     ]
-                each imageNav in sliderNav
-                    img(src = imageNav.src alt = imageNav.alt)
+                each sliderNavItem in sliderNavList
+                    img(src = sliderNavItem.src alt = sliderNavItem.alt)

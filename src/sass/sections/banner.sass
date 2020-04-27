@@ -1,65 +1,60 @@
-.first-s
+.banner
   position: relative
   min-height: 350px
-  img
+  &__img
     object-position: center
     object-fit: cover
     position: absolute
     z-index: -1
     width: 100%
     height: 100%
-  &_container
+  &__container
     display: flex
     flex-direction: column
     justify-content: center
     align-items: flex-start
     text-transform: uppercase
     min-height: 350px
-    h1
+    &__title
       font-size: 48px
       font-weight: 300
       background-color: #000000
       letter-spacing: 4.8px
       color: #ffffff
-      padding: 0 40px
+      padding: 10px 40px
       margin-bottom: 40px
-    p
+    &__subtitle
       font-size: 18px
       font-weight: 300
       letter-spacing: 7.2px
       line-height: 1.33
       color: #000000
-.slick-prev
-  position: absolute
-  top: 50%
-  left: 5%
-  z-index: 99
-.slick-next
-  position: absolute
-  top: 50%
-  right: 5%
-  z-index: 99
 @media (max-width: 1120px)
-  .first-s
-    &_container
-      h1
-        font-size: 40px
+  .banner
+    &__title
+      font-size: 40px
 @media (max-width: 800px)
-  .first-s
-    &_container
-      h1
-        font-size: 34px
-@media (max-width: 520px)
-  .first-s
-    &_container
-      h1
-        font-size: 25px
-      p
-        font-size: 16px
-@media (max-width: 520px)
-  .first-s
-    &_container
-      h1
-        font-size: 18px
-      p
-        font-size: 12px
+  .banner
+    &__container
+      align-items: center
+    &__title
+      font-size: 34px
+      margin-bottom: 30px
+@media (max-width: 535px)
+  .banner
+    &__title
+      font-size: 25px
+      margin-bottom: 20px
+    &__subtitle
+      font-size: 16px
+@media (max-width: 445px)
+  .banner
+    &__title
+      font-size: 18px
+    &__subtitle
+      font-size: 12px
+@media (max-width: 370px)
+  .banner
+    &__title
+      font-size: 15px
+      line-height: 1.3

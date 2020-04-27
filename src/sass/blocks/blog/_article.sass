@@ -1,0 +1,40 @@
+.article
+  display: flex
+  flex-direction: column
+  background-color: #fff
+  max-width: 360px
+  box-shadow: 4px 7px 9px 1px rgba(32, 64, 76, 0.1)
+  &:nth-last-child(n+3)
+    margin-bottom: 20px
+  &__img
+    width: 100%
+  &__content
+    padding: 40px
+  &__title
+    font-size: 20px
+    font-weight: bold
+    color: #333333
+    margin-bottom: 15px
+    line-height: 30px
+  &__author
+    display: flex
+    font-size: 13px
+    color: #cccccc
+    margin-bottom: 25px
+    &-img
+      margin-right: 5px
+      margin-bottom: 3px
+  &__text
+    font-size: 14px
+    color: #777777
+    margin-bottom: 25px
+    line-height: 24px
+  &__date
+    font-size: 13px
+    color: #9a9a9a
+    &-img
+      margin-right: 5px
+@media (max-width: 1200px)
+  .article
+    &:not(:last-child)
+      margin-bottom: 20px

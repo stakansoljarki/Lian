@@ -1,0 +1,130 @@
+aside.sidebar
+    .search.sidebar--margin
+        form.search__form
+            input.search__input(type='text' placeholder='Search')
+            button.search__button(type='submit')
+                img(src="./img/blog/search-solid.svg" alt="search button")
+    .card.sidebar--margin
+        h3.card__title Recent Posts
+        .card__content
+            -
+                let post = [
+                    {
+                        image: './img/blog/post-1.jpg',
+                        alt: 'makeup kit',
+                        heading: 'Lorem ipsum dolor sit amet, consec',
+                        date: 'March 5, 2020'
+                    },
+                    {
+                        image: './img/blog/post-2.jpg',
+                        alt: 'folder for papers',
+                        heading: 'Ut wisi enim ad minim veniam, quis',
+                        date: 'March 17, 2020'
+                    },
+                    {
+                        image: './img/blog/post-3.jpg',
+                        alt: 'Matchbox',
+                        heading: 'Aliquip ex ea commodo aliquam erat volutpat',
+                        date: 'March 21, 2020'
+                    },
+                    {
+                        image: './img/blog/post-4.jpg',
+                        alt: 'cup on a saucer, croissant and packaging of coffee',
+                        heading: 'Ut wisi enim ad minim veniam, quis',
+                        date: 'March 29, 2020'
+                    }
+                ]
+            each cardPost in post
+                .card__post
+                    .card__wrap
+                        img.card__img(src=cardPost.image alt=cardPost.alt)
+                    .card__text
+                        .card__heading #{cardPost.heading}
+                        .card__date #{cardPost.date}
+    .card.sidebar--margin
+        h3.card__title Popular tags
+        ul.card__list
+            -
+                let card = [
+                    {
+                        link: '#',
+                        text: 'construction'
+                    },
+                    {
+                        link: '#',
+                        text: 'engineering'
+                    },
+                    {
+                        link: '#',
+                        text: 'architecture'
+                    },
+                    {
+                        link: '#',
+                        text: 'structural design'
+                    },
+                    {
+                        link: '#',
+                        text: 'civil engineer'
+                    },
+                    {
+                        link: '#',
+                        text: 'industrial'
+                    },
+                    {
+                        link: '#',
+                        text: 'management'
+                    },
+                    {
+                        link: '#',
+                        text: 'mechanical'
+                    },
+
+                ]
+            each cardLink in card
+                li
+                    a.card__link(href=cardLink.link) #{cardLink.text}
+    .card
+        h3.card__title Instagram
+        .card__list
+            -
+                let cardList = [
+                    {
+                        src: './img/blog/inst-1.jpg',
+                        alt: 'notebook'
+                    },
+                    {
+                        src: './img/blog/inst-2.jpg',
+                        alt: 'business cards'
+                    },
+                    {
+                        src: './img/blog/inst-3.jpg',
+                        alt: 'table with chairs'
+                    },
+                    {
+                        src: './img/blog/inst-4.jpg',
+                        alt: 'Wrist Watch'
+                    },
+                    {
+                        src: './img/blog/inst-5.jpg',
+                        alt: 'spoon with fork'
+                    },
+                    {
+                        src: './img/blog/inst-6.jpg',
+                        alt: 'Wrist Watch'
+                    },
+                    {
+                        src: './img/blog/inst-7.jpg',
+                        alt: 'glasses'
+                    },
+                    {
+                        src: './img/blog/inst-8.jpg',
+                        alt: 'tin'
+                    },
+                    {
+                        src: './img/blog/inst-9.jpg',
+                        alt: 'cup on a saucer'
+                    },
+
+                ]
+            each cardImage in cardList
+                img.card__img(src = cardImage.src alt = cardImage.alt)

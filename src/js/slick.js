@@ -8,39 +8,27 @@ function slick() {
     slidesToShow: 1,
     adaptiveHeight: true
   });
-  $('.portfolio-container').slick({
-    dots: false,
-    infinite: true,
-    arrows: true,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
-    speed: 1500,
-    slidesToShow: 1,
-    adaptiveHeight: true
-  });
-  $('.portfolio-image__for').slick({
+  $('.project__slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 1500,
+    speed: 1000,
     arrows: false,
     fade: true,
-    asNavFor: '.portfolio-image__nav'
+    asNavFor: '.project__slider-nav'
   });
-  $('.portfolio-image__nav').slick({
+  $('.project__slider-nav').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    asNavFor: '.portfolio-image__for',
+    asNavFor: '.project__slider-for',
     dots: false,
     arrows: false,
-    centerPadding: '30px',
     focusOnSelect: true
   });
-
   $('a[data-slide]').click(function(e) {
     e.preventDefault();
-    var slideno = $(this).data('slide');
-    $('.portfolio-image__nav').slick('.portfolio-image__for', slideno - 1);
+    let slideno = $(this).data('slide');
+    $('.project__slider-nav').slick('.project__slider-for', slideno - 1);
   });
 }
 

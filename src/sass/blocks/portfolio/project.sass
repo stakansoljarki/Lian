@@ -1,0 +1,106 @@
+.project
+  background-color: #fafafa
+  padding-top: 70px
+  padding-bottom: 70px
+  &__container
+    display: flex
+    justify-content: space-between
+  &__content
+    width: 100%
+    max-width: 49%
+  &__heading,
+  &__subheading,
+  &__management
+    border-bottom: 1px solid #cccccc
+    margin-bottom: 25px
+    padding-bottom: 25px
+  &__title
+    font-size: 30px
+    letter-spacing: 6px
+    color: #000
+    text-transform: uppercase
+    margin-bottom: 15px
+    line-height: 1.2
+  &__subtitle
+    font-size: 16px
+    font-weight: 700
+    color: #555
+  &__subheading
+    font-size: 14px
+    line-height: 2.14
+    color: #777
+  &__management
+    &-title
+      font-size: 16px
+      font-weight: 700
+      color: #333
+      text-transform: uppercase
+      margin-bottom: 10px
+  &__list
+    display: flex
+    font-size: 16px
+    color: #999
+    &:not(:last-child)
+      margin-bottom: 25px
+  &__item
+    &:not(:last-child)
+      margin-right: 5px
+  &__wrap
+    display: flex
+    overflow: hidden
+    &:hover
+      .project__social
+        left: 0
+  &__share
+    font-size: 13px
+    color: #ffffff
+    background-color: #707070
+    text-transform: uppercase
+    letter-spacing: 0.65px
+    border-radius: 3px
+    cursor: pointer
+    padding: 12px 20px
+    margin-right: 20px
+    z-index: 99
+  &__social
+    display: flex
+    background-color: #e1e1e1
+    border-radius: 3px
+    text-align: center
+    position: relative
+    left: -100%
+    transition: 1s ease-in-out
+    &:before
+      display: block
+      content: ''
+      width: 0
+      height: 0
+      border: 10px solid transparent
+      border-right-color: #e1e1e1
+      position: absolute
+      top: 10px
+      left: -20px
+    &-link
+      display: inline-block
+      margin: 10px 15px
+      transition: all .3s ease
+      &:hover
+        transform: scale(1.2)
+  &__slider
+    width: 100%
+    max-width: 49%
+
+@media (max-width: 760px)
+  .project
+    &__container
+      flex-direction: column
+    &__content
+      margin-bottom: 25px
+    &__content,
+    &__slider
+      max-width: 100%
+@media (max-width: 414px)
+  .project
+    &__title,
+    &__subtitle
+      text-align: center

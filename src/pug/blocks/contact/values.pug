@@ -1,11 +1,11 @@
 section.values
     .values__container.container
-        .values__heading.values__heading--mrg
+        .values__heading.values__heading--margin
             h2.values__title Our Values
             p.values__subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
         .values__wrap
             -
-                let valuesCard = [
+                let valuesCardList = [
                     {
                         src: './img/contact/contact1.jpg',
                         alt: 'puzzled man with laptop',
@@ -25,10 +25,10 @@ section.values
                         subtitle: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.'
                     }
                 ]
-            each valuesItem in valuesCard
+            each valuesCardItem in valuesCardList
                 .values__card
                     .values__inner
-                        img.values__img(src=valuesItem.src alt=valuesItem.alt)
+                        img.values__img(src=valuesCardItem.src alt=valuesCardItem.alt)
                     .values__content
-                        h3.values__content-title=valuesItem.title
-                        p.values__content-subtitle=valuesItem.subtitle
+                        h3.values__content-title=valuesCardItem.title
+                        p.values__content-subtitle=valuesCardItem.subtitle

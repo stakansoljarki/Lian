@@ -8,7 +8,7 @@ each item in articleContent
             .article__author
                 img.article__author-img(src=item.authorImg alt="author logo")
                 span !{item.authorText}
-            p.article__text #{item.text}
+            p.article__text=item.text
             .article__date
                 img.article__date-img(src=item.dateImg alt="calendar")
                 span !{item.dateText}

@@ -1,14 +1,14 @@
-include article-massive
+include article-list
 each item in articleContent
     article.article
         .article__wrap
             img.article__img(src=item.img alt=item.alt)
         .article__content
-            h3.article__title #{item.title}
+            h3.article__title=item.title
             .article__author
-                img.article__author-img(src=item.authorImg alt="")
+                img.article__author-img(src=item.authorImg alt="author logo")
                 span !{item.authorText}
             p.article__text #{item.text}
             .article__date
-                img.article__date-img(src=item.dateImg alt="")
+                img.article__date-img(src=item.dateImg alt="calendar")
                 span !{item.dateText}

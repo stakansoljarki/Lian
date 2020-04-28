@@ -39,8 +39,8 @@ aside.sidebar
                     .card__wrap
                         img.card__img(src=cardPost.image alt=cardPost.alt)
                     .card__text
-                        .card__heading #{cardPost.heading}
-                        .card__date #{cardPost.date}
+                        .card__heading=cardPost.heading
+                        .card__date=cardPost.date
     .card.sidebar--margin
         h3.card__title Popular tags
         ul.card__list
@@ -82,7 +82,7 @@ aside.sidebar
                 ]
             each cardLink in card
                 li
-                    a.card__link(href=cardLink.link) #{cardLink.text}
+                    a.card__link(href=cardLink.link)=cardLink.text
     .card
         h3.card__title Instagram
         .card__list

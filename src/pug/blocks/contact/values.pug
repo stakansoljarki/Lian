@@ -1,0 +1,34 @@
+section.values
+    .values__container.container
+        .values__heading.values__heading--mrg
+            h2.values__title Our Values
+            p.values__subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+        .values__wrap
+            -
+                let valuesCard = [
+                    {
+                        src: './img/contact/contact1.jpg',
+                        alt: 'puzzled man with laptop',
+                        title: 'Who We Are',
+                        subtitle: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.'
+                    },
+                    {
+                        src: 'img/contact/contact2.jpg',
+                        alt: 'woman kneads hands at the table',
+                        title: 'Our Vision',
+                        subtitle: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.'
+                    },
+                    {
+                        src: './img/contact/contact3.jpg',
+                        alt: 'glasses, pen, cup of coffee and laptop on the desktop',
+                        title: 'Our Mission',
+                        subtitle: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.'
+                    }
+                ]
+            each valuesItem in valuesCard
+                .values__card
+                    .values__inner
+                        img.values__img(src=valuesItem.src alt=valuesItem.alt)
+                    .values__content
+                        h3.values__content-title=valuesItem.title
+                        p.values__content-subtitle=valuesItem.subtitle

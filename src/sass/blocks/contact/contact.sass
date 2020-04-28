@@ -1,0 +1,103 @@
+.contact
+  padding-top: 80px
+  padding-bottom: 80px
+  background-color: #fafafa
+  &__container
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+  &__info
+    display: flex
+    flex-direction: column
+    &--margin
+      margin-right: 20px
+  &__wrap
+    &:not(:last-child)
+      border-bottom: 1px solid #000
+      padding-bottom: 25px
+      margin-bottom: 25px
+  &__title
+    font-size: 30px
+    letter-spacing: 12px
+    text-transform: uppercase
+    color: #000000
+    margin-bottom: 15px
+  &__subtitle
+    font-size: 16px
+    color: #2f302f
+  &__item
+    font-size: 15px
+    color: #777777
+    &:not(:last-child)
+      margin-bottom: 10px
+  &__number
+    color: #222222
+    font-weight: bold
+    &:not(:last-child)
+      margin-bottom: 10px
+  &__inner
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__form
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    &-input
+      min-width: 370px
+      height: 40px
+      border: 1px solid #ebebeb
+      border-radius: 2px
+      padding: 10px
+      margin-bottom: 15px
+      &:first-child
+        margin-right: 20px
+      &::placeholder
+        font-size: 16px
+        font-style: italic
+        color: #b7b7b7
+      &[name='message']
+        max-width: 760px
+        height: 120px
+    &-submit
+      width: 220px
+      height: 40px
+      border-radius: 2px
+      background-color: #000000
+      color: #fff
+      font-size: 14px
+      letter-spacing: 0.7px
+      text-transform: uppercase
+      cursor: pointer
+
+@media (max-width: 1140px)
+  .contact
+    &__form
+      &-input
+        min-width: 320px
+        &[name='message']
+          max-width: 640px
+@media (max-width: 1040px)
+  .contact
+    &__form
+      &-input
+        min-width: 240px
+        &[name='message']
+          max-width: 500px
+@media (max-width: 900px)
+  .contact
+    &__container
+      justify-content: center
+      max-width: 450px
+      &-margin
+        margin: 0
+    &__info
+      width: 100%
+      margin-bottom: 25px
+    &__form
+      align-items: center
+      &-input
+        width: 100%
+        &:first-child
+          margin-right: 0

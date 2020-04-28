@@ -1,0 +1,32 @@
+.blog
+  background-color: #fafafa
+  padding-top: 70px
+  padding-bottom: 100px
+  &__wrap
+    display: flex
+    justify-content: space-between
+  &__inner
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    flex-basis: 67%
+
+@media (max-width: 1200px)
+  .blog
+    &__inner
+      display: flex
+      flex-direction: column
+      align-items: center
+      flex-basis: 65%
+@media (max-width: 800px)
+  .blog
+    &__inner
+      flex-basis: 49%
+      margin-right: 2%
+@media (max-width: 630px)
+  .blog
+    &__wrap
+      flex-direction: column
+    &__inner
+      flex-basis: 100%
+      order: 2

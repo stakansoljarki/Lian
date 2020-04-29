@@ -42,11 +42,19 @@
   &__image
     margin-bottom: 30px
 
-@media (max-width: 1120px)
+@media (max-width: 1140px)
   .portfolio
     &__content
       justify-content: space-around
       align-items: center
+    &__wrap
+      &--order
+        order: 3
+    &__image
+      &--first
+        order: 3
+      &--third
+        order: -1
 @media (max-width: 800px)
   .portfolio
     &__content

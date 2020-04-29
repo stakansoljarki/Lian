@@ -15,56 +15,62 @@ section.portfolio
                 li.portfolio__item=portfolioItem
         .portfolio__content
             -
-                let portfolioWrapListFirst = [
+                let portfolioWrapList = [
                     {
-                        srcFirst: './img/portfolio-img9.jpg',
-                        altFirst: 'two bottles',
-                        srcSecond: './img/portfolio-img6.jpg',
-                        altSecond: 'curved lamp',
-                        srcThird: './img/portfolio-img5.jpg',
-                        altThird: 'fork and spoon'
+                        item: [
+                            {
+                                src: './img/portfolio-img9.jpg',
+                                alt: 'two bottles'
+                            },
+                            {
+                                src: './img/portfolio-img6.jpg',
+                                alt: 'curved lamp'
+                            },
+                            {
+                                src: './img/portfolio-img5.jpg',
+                                alt: 'fork and spoon'
+                            }
+                        ]
                     },
-                     {
-                        class: 'portfolio__wrap--last',
-                        classFirst: 'portfolio__image--first',
-                        classSecond: 'portfolio__image--third',
-                        srcFirst: './img/portfolio-img7.jpg',
-                        srcSecond: './img/portfolio-img4.jpg',
-                        srcThird: './img/portfolio-img2.jpg',
-                        altFirst: '3 chairs on top of each other',
-                        altSecond: 'business card',
-                        altThird: '2 boxes from cosmetics'
-                    }
-                ]
-            each portfolioWrapItem in portfolioWrapListFirst
-                .portfolio__wrap(class=portfolioWrapItem.class)
-                    .portfolio__image(class=portfolioWrapItem.classFirst)
-                        img(src=portfolioWrapItem.srcFirst alt=portfolioWrapItem.altFirst)
-                    .portfolio__image
-                        img(src=portfolioWrapItem.srcSecond alt=portfolioWrapItem.altSecond)
-                    .portfolio__image(class=portfolioWrapItem.classSecond)
-                        img(src=portfolioWrapItem.srcThird alt=portfolioWrapItem.altThird)
-            -
-                let portfolioWrapListSecond = [
                     {
-                        class: 'portfolio__wrap--order',
-                        srcFirst: './img/portfolio-img8.jpg',
-                        srcSecond: './img/portfolio-img1.jpg',
-                        srcThird: './img/portfolio-img3.jpg',
-                        srcFourth: './img/portfolio-img1.jpg',
-                        altFirst: 'table with chairs',
-                        altSecond: 'wall clock',
-                        altThird: 'chair in front and in profile',
-                        altFourth: 'wall clock'
+                        item: [
+                            {
+                                src: './img/portfolio-img8.jpg',
+                                alt: 'table with chairs',
+                            },
+                            {
+                                src: './img/portfolio-img1.jpg',
+                                alt: 'wall clock',
+                            },
+                            {
+                                src: './img/portfolio-img3.jpg',
+                                alt: 'chair in front and in profile',
+                            },
+                            {
+                                src: './img/portfolio-img1.jpg',
+                                alt: 'wall clock'
+                            }
+                        ]
+                    },
+                    {
+                        item: [
+                            {
+                                src: './img/portfolio-img7.jpg',
+                                alt: '3 chairs on top of each other'
+                            },
+                            {
+                                src: './img/portfolio-img4.jpg',
+                                alt: 'business card'
+                            },
+                            {
+                                src: './img/portfolio-img2.jpg',
+                                alt: '2 boxes from cosmetics'
+                            }
+                        ]
                     }
                 ]
-            each portfolioWrapItem in portfolioWrapListSecond
+            each portfolioWrapItem in portfolioWrapList
                 .portfolio__wrap(class=portfolioWrapItem.class)
-                    .portfolio__image(class=portfolioWrapItem.classFirst)
-                        img(src=portfolioWrapItem.srcFirst alt=portfolioWrapItem.altFirst)
-                    .portfolio__image
-                        img(src=portfolioWrapItem.srcSecond alt=portfolioWrapItem.altSecond)
-                    .portfolio__image(class=portfolioWrapItem.classSecond)
-                        img(src=portfolioWrapItem.srcThird alt=portfolioWrapItem.altThird)
-                    .portfolio__image(class=portfolioWrapItem.classSecond)
-                        img(src=portfolioWrapItem.srcFourth alt=portfolioWrapItem.altFourth)
+                    each portfolioImage in portfolioWrapItem.item
+                        .portfolio__image(class=portfolioImage.class)
+                            img(src=portfolioImage.src alt=portfolioImage.alt)

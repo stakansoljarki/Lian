@@ -34,33 +34,37 @@
   &__content
     display: flex
     flex-direction: row
-    justify-content: space-between
     flex-wrap: wrap
   &__wrap
     display: flex
     flex-direction: column
-    &--last
-      order: 1
+    &:not(:last-child)
+      margin-right: 30px
   &__image
     margin-bottom: 30px
 
-@media (max-width: 1140px)
+@media (max-width: 1169px)
   .portfolio
     &__content
       justify-content: space-around
       align-items: center
     &__wrap
-      &--order
-        order: 3
-    &__image
-      &--first
-        order: 3
-      &--third
-        order: -1
+      &:nth-child(2)
+        order: 1
+@media (max-width: 1139px)
+  .portfolio
+    &__wrap
+      &:not(:last-child)
+        margin-right: 0
+      &:first-child
+        margin-right: 30px
 @media (max-width: 800px)
   .portfolio
     &__content
       flex-direction: column
+    &__wrap
+      &:first-child
+        margin-right: 0
 @media (max-width: 700px)
   .portfolio
     &__list

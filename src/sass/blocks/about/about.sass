@@ -12,9 +12,9 @@
   &__img
     width: 100%
     height: auto
-  &__story
-    text-align: left
-    margin-bottom: 40px
+  &__inner
+    &:not(:last-child)
+      margin-bottom: 40px
   &__title
     font-size: 18px
     font-weight: 300
@@ -34,8 +34,9 @@
 
 @media (max-width: 1024px)
   .about
-    &__story
-      margin-bottom: 20px
+    &__inner
+      &:not(:last-child)
+        margin-bottom: 20px
     &__title
       font-size: 16px
       margin-bottom: 20px
@@ -46,8 +47,9 @@
 
 @media (max-width: 915px)
   .about
-    &__story
-      margin-bottom: 20px
+    &__inner
+      &:not(:last-child)
+        margin-bottom: 20px
     &__title
       font-size: 15px
       margin-bottom: 10px

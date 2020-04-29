@@ -70,7 +70,7 @@ section.portfolio
                     }
                 ]
             each portfolioWrapItem in portfolioWrapList
-                .portfolio__wrap(class=portfolioWrapItem.class)
+                .portfolio__wrap
                     each portfolioImage in portfolioWrapItem.item
-                        .portfolio__image(class=portfolioImage.class)
+                        .portfolio__image
                             img(src=portfolioImage.src alt=portfolioImage.alt)

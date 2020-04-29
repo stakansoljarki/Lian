@@ -4,24 +4,35 @@ section.team
             h2.team__title Awesome Team
             p.team__description Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
         .team__container
-            .team-card
-                .team-card__wrap
-                    img.team-card__img(src="img/about/team1.jpg" alt="waist-length portrait of brunette woman in office suit")
-                .team-card__text
-                    h3.team-card__title Lian Joy
-                    span.team-card__position CEO/Founder
-                    p.team-card__description Lorem ipsum dolor sit amet, conse ctetuer adipi scing elit, sed diam nonu mmy nibh euis mod tinci
-            .team-card
-                .team-card__wrap
-                    img.team-card__img(src="img/about/team2.jpg" alt="waist-length portrait of a brunette man in a white shirt")
-                .team-card__text
-                    h3.team-card__title Albert Thanh
-                    span.team-card__position CEO/Founder
-                    p.team-card__description Lorem ipsum dolor sit amet, conse ctetuer adipi scing elit, sed diam nonu mmy nibh euis mod tinci
-            .team-card
-                .team-card__wrap
-                    img.team-card__img(src="img/about/team3.jpg" alt="waist-length portrait of a curly-haired woman in a shirt")
-                .team-card__text
-                    h3.team-card__title Jenn Pereira
-                    span.team-card__position CEO/Founder
-                    p.team-card__description Lorem ipsum dolor sit amet, conse ctetuer adipi scing elit, sed diam nonu mmy nibh euis mod tinci
+            -
+                let teamCardList = [
+                    {
+                        src: './img/about/team1.jpg',
+                        alt: 'waist-length portrait of brunette woman in office suit',
+                        title: 'Lian Joy',
+                        position: 'CEO/Founder',
+                        subtitle: 'Lorem ipsum dolor sit amet, conse ctetuer adipi scing elit, sed diam nonu mmy nibh euis mod tinci'
+                    },
+                    {
+                        src: './img/about/team2.jpg',
+                        alt: 'waist-length portrait of a brunette man in a white shirt',
+                        title: 'Albert Thanh',
+                        position: 'CEO/Founder',
+                        subtitle: 'Lorem ipsum dolor sit amet, conse ctetuer adipi scing elit, sed diam nonu mmy nibh euis mod tinci'
+                    },
+                    {
+                        src: './img/about/team3.jpg',
+                        alt: 'waist-length portrait of a curly-haired woman in a shirt',
+                        title: 'Jenn Pereira',
+                        position: 'CEO/Founder',
+                        subtitle: 'Lorem ipsum dolor sit amet, conse ctetuer adipi scing elit, sed diam nonu mmy nibh euis mod tinci'
+                    }
+                ]
+            each teamCardItem in teamCardList
+                .team-card
+                    .team-card__wrap
+                        img.team-card__img(src = teamCardItem.src alt = teamCardItem.alt)
+                    .team-card__text
+                        h3.team-card__title=teamCardItem.title
+                        span.team-card__position=teamCardItem.position
+                        p.team-card__description=teamCardItem.subtitle

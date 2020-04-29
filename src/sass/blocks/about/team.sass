@@ -1,5 +1,5 @@
 .team
-  background-color: #fafafa
+  background-color: $background-color-main
   padding-top: 50px
   padding-bottom: 75px
   &--margin
@@ -15,7 +15,7 @@
     font-weight: 300
     letter-spacing: 12px
     line-height: 1.3
-    color: #000000
+    color: $color-main
     text-transform: uppercase
     margin-bottom: 30px
   &__description
@@ -23,7 +23,7 @@
     line-height: 2.14
     letter-spacing: 0.35px
     text-align: center
-    color: #777777
+    color: $color-submain
   &__container
     display: flex
     justify-content: space-between
@@ -43,7 +43,7 @@
       font-size: 24px
       font-weight: 300
       letter-spacing: 0.96px
-      color: #041608
+      color: $color-main
       text-transform: uppercase
       margin-bottom: 15px
     &__position
@@ -51,16 +51,38 @@
       font-size: 16px
       font-weight: bold
       letter-spacing: 0.4px
-      color: #777777
+      color: $color-submain
       margin-bottom: 20px
     &__description
       font-size: 14px
       line-height: 1.71
-      color: #9c9c9c
+      color: $color-submain
 
-@media (max-width: 1170px)
+@media (max-width: 1140px)
+  .team
+    &-card
+      max-width: 320px
+@media (max-width: 1023px)
+  .team
+    &__container
+      justify-content: center
+      align-items: center
+    &-card
+      max-width: 360px
+      &:first-child
+        margin-right: 20px
+      &:last-child
+        margin-top: 20px
+@media (max-width: 770px)
   .team
     &__container
       flex-direction: column
+      justify-content: center
+      align-items: center
     &-card
-      margin-bottom: 35px
+      &:last-child
+        margin: 0
+      &:not(:last-child)
+        margin-bottom: 20px
+      &:first-child
+        margin-right: 0

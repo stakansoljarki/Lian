@@ -1,5 +1,5 @@
 .project
-  background-color: #fafafa
+  background-color: $background-color-main
   padding-top: 70px
   padding-bottom: 70px
   &__container
@@ -11,35 +11,35 @@
   &__heading,
   &__subheading,
   &__management
-    border-bottom: 1px solid #cccccc
+    border-bottom: 1px solid $color-submain
     margin-bottom: 25px
     padding-bottom: 25px
   &__title
     font-size: 30px
     letter-spacing: 6px
-    color: #000
+    color: $color-main
     text-transform: uppercase
     margin-bottom: 15px
     line-height: 1.2
   &__subtitle
     font-size: 16px
     font-weight: 700
-    color: #555
+    color: $color-submain
   &__subheading
     font-size: 14px
     line-height: 2.14
-    color: #777
+    color: $color-submain
   &__management
     &-title
       font-size: 16px
       font-weight: 700
-      color: #333
+      color: $color-main
       text-transform: uppercase
       margin-bottom: 10px
   &__list
     display: flex
     font-size: 16px
-    color: #999
+    color: $color-submain
     &:not(:last-child)
       margin-bottom: 25px
   &__item
@@ -54,14 +54,14 @@
   &__share
     font-size: 13px
     color: #ffffff
-    background-color: #707070
+    background-color: $color-submain
     text-transform: uppercase
     letter-spacing: 0.65px
     border-radius: 3px
     cursor: pointer
     padding: 12px 20px
     margin-right: 20px
-    z-index: 99
+    z-index: 1
   &__social
     display: flex
     background-color: #e1e1e1
